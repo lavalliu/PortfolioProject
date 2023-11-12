@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/*Let’s start with “import url(‘path’)...What does it do? We use it to link to the Google font
+called Roboto so that we can use it as the font of our website.*/
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/*The asterisk * is a CSS selector that selects all HTML tags on our page. We set their margin and padding to 0.
+We then set their box-sizing to border-box. Why do we do that?
+We want width or height, border, margin, and padding to add up to be the total length. This is what I mean:
+in CSS, if a box has width of 100px and padding of 10px, the width of the box will now be 110px
+But we don't want that – we want everything to be 100px. Width should still be 100px including the
+margin of 10px instead of making it 110px. That is what box-sizing: border-box does.
+Note: when you're using it, you will start to better understand how it works – but for now,
+I just wanted to give some insight a beginner can quickly relate to.*/
+body {
+  font-family: 'Roboto', sans-serif;
+  }
+
+/*We select the body tag and set its font-family to Roboto and use sans-serif as a fall-back
+ in case Roboto is not available.*/
+
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 15px;
+}
+
+/*The .header class name is used to select (or connect to) the header section of our website
+so that we can add some styles to it.
+We set its display property to flex to create a layout out of it, and then we can easily divide it into sections.
+We will divide it into sections later.
+Justify-content: space-between means we want the contents in the header to have space between them once there are more than one.
+Align-items: centre is used to move all the contents of the header to the centre-left of your screen.
+That is called vertical alignment. We finally set the height of the header to 60px and its padding to 15px.*/
+
+main {
+  height: calc(100vh - 70px);
+  display: flex;
+  background-color: #f9f9f9;
+}
+
+/*We set the height of the main section to calc( 100vh - 70px)...What does it mean? V stands for a viewport,
+which is the visible part of a window’s screen without scrolling.
+“height” means vertical length, and we can also use “w” which means width - horizontal length.
+In short, 100vh means the total height that is visible in a browser without scrolling.
+And we use calc ( 100vh - 70px) to run a calculation that subtract 70px from 100vh.
+We set its display property to flex to create a layout out of it. Finally, we set its
+background colour to #f9f99f which is a kind of silver or ash.*/
+
+.side-bar {
+    height: 100%;
+    width: 17%;
+    background-color: white;
+    overflow-y: hidden;
+  }
+
+/*The height of the .side-bar is set to 100% of its parent. That means it will have the same height as its parent.
+Its width is set to 17% of its parent and background colour set to white.
+Hey! What is overflow-y: hidden? When Twitter loads 10 tweets at once, you can’t see everything at once and you have to scroll,
+right? In this case, we hide the scroll bar. Gracias!*/
+
+@media (max-width: 768px) {
+    .side-bar {
+      display: none;
+    }
+  }
+
+  /*We use this media query to make a website responsive on mobile, tablets, and desktop.
+  When the YouTube clone is on a device whose screen is less than or equal to 768px
+  (like mobile & tablet), the sidebar will disappear. Also, max-width:
+  768px means that a device’s screen can be less or equal to 768px.*/
+
+.left {
+   display: flex;
+   align-items: center;
+}
+
+.left #menu {
+   padding: 0 7px;
+   cursor: pointer;
+}
+/*Don’t forget, we set the justify-content property of the header to space-between,
+which means there will be equal space between every tag in the header.
+Now, we gave a class left because it should be to the left side. We set its display property to flex
+to create sections with the layout out of it. Its children are aligned to the left-center of the header.
+We also access the menu that is inside the left section with its id.
+We set its padding top and bottom to 0 and its padding left and right to 7px.
+Its cursor property is set to the pointer so that when the mouse is on it, it will show a pointing finger.*/
+
+.search {
+ display: flex;
+}
+
+.search form {
+ display: flex;
+ border: 1px solid #ddd;
+ height: 45px;
+}
+/*We set its display property to flex so that we can create a layout with its children.
+We do the same to the form which is inside of the search/center section.
+Its border thickness is set to 1px, type to solid, and color to #ddd (something silver or ash).*/
+
+.search input {
+  width: 600px;
+  padding:10px;
+  border: 0;
+  height: 100%;
+  border-radius: 2px 0 0 2px
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+/*We select the input which is inside the seach section with .search input. We set its border-radius to 2px top,
+ 0 right, 0 bottom, and 2px left. Then, what is border-radius? It is the curved edges of an object with four angles.*/
+
+ .search button {
+   height: 100%;
+   width: 60px;
+   border: none;
+ }
+
+ .mic {
+   margin-top: 10px;
+ }
+
+/*The button inside the search section is also selected with the .search button. Its height is set to 100% of its parent.
+ We don’t want it to have any border so we set its border to 0.
+We access the microphone icon with its class name .mic and set its margin-top to 10px so that it will move down a bit.*/
+
+.material-icons {
+    color: rgb(100, 100, 100);
+    padding: 0 7px;
+    cursor: pointer;
+  }
+  /*We have added children and sections to the header of the YouTube clone. */
+
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  /*The only thing I will explain here is flex-direction.
+  This determines whether we want the children to appear in a column
+  (vertical) or row (horizontal). In this case we go with a horizontal display.*/
+
+  .nav-link {
+     display: flex;
+     align-items: center;
+     padding: 12px 25px;
+   }
+
+  .nav-link span {
+     margin-left: 15px;
+   }
+
+  .nav-link:hover {
+     background: #e5e5e5;
+     cursor: pointer;
+   }
+
+  .active {
+     background: #e5e5e5;
+  }
+
+
+  hr {
+   height: 1px;
+   background-color: #e5e5e5;
+   border: none;
+ }
+
+ /*tag to create a line that separates them from the next category. Now, let’s style the hr tag.*/
+
+ .content {
+   background-color: #f9f9f9;
+   width: 100%;
+   height: 100%;
+   padding: 15px 15px;
+   border-top: 1px solid #ddd;
+   overflow-y: scroll;
+ }
+
+ .videos {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   flex-wrap: wrap;
+ }
+
+ .video {
+   width: 270px;
+   margin-bottom: 30px;
+ }
+/*If you check the style for .videos, you will see flex-wrap.
+It is the only property I have not explained before, so let’s explain it.
+When the screen can only take four items, for example, other items will be moved to another row.
+That is what “flex-wrap” does.*/
+
+.thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.thumbnail img {
+  object-fit: cover;
+  height: 94%;
+  width: 100%;
+}
+.author img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+/*The only thing you may not understand above because we haven’t explained it before is object-fit:
+cover. Then how do we use it?
+object-fit in this case is used to clip the image to its container so as to remove overflow
+(areas where the image is bigger than its container) in height and width:*/
+
+.details {
+  display: flex;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h3 {
+  color: rgb(3, 3, 3);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-size: 12px;
+}
+
+/*In this case, we make a layout out of .details and because we don’t set its flex-direction to property,
+it will be set to row – which is its default value. You see that a layout is also made out of the title
+and set its children to appear in a column by setting flex-direction to column.
+We select the h3 tag that is inside .title and we set its color to somewhat black…I will explain how to understand the color code later.
+line-height is used to set the height of a line of text and in this case, we set it to 18px.
+Finally we use .title a, span to select the anchor tag in .title. We also select all span tags on the page and set their text-decoration to none.
+So what is text decoration? It has a design such as an underline that an anchor tag has, and we hide it in this case by setting it to none*/
+
+@media (max-width: 768px) {
+    .side-bar {
+      display: none;
+    }
+    .search {
+      display: none;
+    }
+}
+
+/*@media (max-width: 768px) { } is used to set the device screen sizes that the code in the media query will apply to.
+In this example, max-width: 768px means that the styles in the media query will be applied to any screen size that is equal to or less than 768px.
+So, whenever the screen size in use is 768px or less, we will hide the sidebar and the search input by setting their display property to none.*/
+
+@media (max-width: 900px) {
+    .search input {
+      width: 25rem;
+    }
+  }
+
+/*Finally, we make the the search input a bit smaller whenever the screen size of the device in use is less or equal to 900px.*/

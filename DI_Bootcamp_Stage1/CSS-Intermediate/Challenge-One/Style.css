@@ -1,0 +1,35 @@
+html {
+  background-color: #364371;
+}
+/*
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    div {
+        width : 45%;
+        display: inline-block;
+
+    }
+}
+*/
+
+
+#container
+{
+width: 30px;
+margin-top: 0px;
+
+
+}
+#nav
+{
+width: 500px;
+padding: .5em;
+background-color: #B0CFFF;
+margin-top: 0px;
+}
+#content
+{
+  width: 500px;
+padding: .5em;
+background-color: #5B7FBD;
+
+}

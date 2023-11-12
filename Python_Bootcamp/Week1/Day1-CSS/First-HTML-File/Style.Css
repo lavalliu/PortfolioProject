@@ -1,0 +1,28 @@
+p{
+    text-align: center;
+    font-weight: bold;
+}
+.container img{
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.container2 img {
+    display: block;
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    color: red;
+    text-align: center;
+    border: 1px solid red;
+    margin: 10px 100px;
+}
+table, th, tr{
+    border: 1px solid black;
+    margin: 30px 100px;
+}

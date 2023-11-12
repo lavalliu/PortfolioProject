@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+  
+    <style> 
+
+.container { 
+    display: flex; 
+}
+
+.left-sidebar > div , .right-sidebar > div{ 
+    background-color: yellow; 
+    width: 200px; 
+    margin: 20px 60px; 
+    line-height: 200px; 
+    align-content: space-between;
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+} 
+.left-sidebar {
+    order: 1;
+    flex: 1;
+    align-content: space-between;
+}
+.right-sidebar {
+    flex: 1;
+    order: 3;
+}
+body {
+    text-align: center;
+    font-size: 24px;
+    line-height: 200px; 
+    color: yellow;
+}
+
+main {
+    flex: 4;
+    order: 2;
+    min-height: 95vh;
+}
+main >div {
+    background-color: yellow; 
+    width: 200px; 
+    align-content: space-between;
+    display:inline-block;
+    margin: 360px 45px 200px 45px;
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+
+}
+
+
+</style> 
+
+  
+<body> 
+    <div class="container"> 
+        <aside class="left-sidebar">
+            <div>1</div> 
+            <div>2</div> 
+            <div>3</div>  
+            <div>4</div> 
+        </aside>
+        <aside class="right-sidebar">
+            <div>5</div> 
+            <div>6</div> 
+            <div>7</div>  
+            <div>8</div> 
+        </aside>
+        <main class="main">
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </main>
+    </div> 
+</body> 
+  
+</html> 

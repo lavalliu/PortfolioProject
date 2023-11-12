@@ -1,0 +1,49 @@
+body {
+    color: grey;
+}
+.container-fluid {
+    background-color: black;
+    border: 1px solid black;
+}
+.btn {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 5px 10px;
+}
+
+.col-sm a {
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 5px 10px;
+}
+
+.btn-outline-success {
+    background-color: rgb(139, 189, 139);
+    color: white;
+
+}
+
+.badge {
+    background-color: rgb(91,192,222);
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+.nav-item {
+    color: white;
+}
+
+.nav-link .nav-item a ul li .navbar-nav {
+    display:inline;
+
+}
+
+.jumbotron {
+    padding: 50px;
+    background-color: rgb(231, 228, 228);
+}

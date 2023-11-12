@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p>TABLES</p>
+</head>
+<body>
+    <div class="container"</div>
+    <table>
+        <tr class="head">
+            <th>Table Header 1</th>
+            <th>Table Header 2</th>
+            <th>Table Header 3</th>
+        </tr>
+        <tr class="mix">
+            <td>Input 1 under header 1</td>
+            <td>Input 1 under header 2</td>
+            <td>Input 1 under header 3</td>
+        </tr>
+        <tr class="anothercolor">
+            <td class="complicated">Input 2 under header 1</td>
+            <td>Input 2 under header 2</td>
+            <td>Input 2 under header 3</td>
+        </tr>
+        <tr>
+            <td>Input 3 under header 1</td>
+            <td>Input 3 under header 2</td>
+            <td>Input 3 under header 3</td>
+        </tr>
+    </table>
+    <style>
+        table,td,th{
+            border: 2px solid;
+            padding: 5px;
+            height: 100px;
+            text-align: center;
+        }
+        .head{
+            background-color: pink
+            /* textcoloration:lab(from color l a b); */
+        }
+        .anothercolor{
+            background-color: grey;
+        }
+        .complicated{
+            color: brown;
+        }
+        .mix{
+            background-color: blue;
+        }
+        /* .container{ 
+            max-height: 200px;
+            max-width: 200px;
+            overflow: scroll;
+        }*/
+    </style>
+</body>
+</html>

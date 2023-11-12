@@ -1,0 +1,59 @@
+.image-container {
+    background-image: url(workspace-1280538.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.nav-link, .navbar-brand, .nav-item {
+    color: white;
+    float: right;
+}
+.container-fluid{
+    width: 80%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.container1 {
+    border: solid 1px white;
+    color: white;
+    padding-top: 5%;
+    font-size: xx-large;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13em;
+    text-align: center;
+}
+.row {
+    border: solid 1px white;
+    color: white;
+    padding-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13em;
+}
+.container1 a {
+    font-style: italic;
+  }
+
+.row2, .btn {
+    color: rgb(26,88,165);
+}

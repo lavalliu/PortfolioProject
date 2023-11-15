@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <!-- linking bootstrap below -->
+    <link href="bootstrap.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div class="image-container">
+<!-- NAV BAR -->
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">INTENSE job board</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- ms-auto means margin start auto moves the menu to the right of the container -->
+                    <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="#">Find a job</a>
+                    </li>			
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Post a job</a>
+                    </li>	
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pages</a>
+                    </li>	
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>	
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>	
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>	
+                </div>
+            </div>
+        </nav>	
+        <div class="main-container">
+            <div class="container1">
+                <d>Build Your Future</d>
+                <br>
+                <br>
+                <a>We offer <c>2989</c> job vacancies right now!</a>
+            </div>
+            <!-- <div class="container1"></div> -->
+            <div class="row2">
+                <div class="col-sm">
+                    <input type="text" placeholder="job title, skills or category" id="username" name="username">
+                </div>
+                <div class="col-sm dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    City or state
+                </div>       
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                <div class="col-sm">
+                    <button class="btn">find jobs </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="green-bar">
+        <a class="active" href="#"><i class="fa fa-plus-square"></i><br>Healthcare<br>__</a> 
+        <a href="#"><i class="fa fa-car"></i><br>Automobile Jobs<br>__</a> 
+        <a href="#"><i class="fa fa-building"></i><br>Construction<br>__</a> 
+        <a href="#"><i class="fa fa-cutlery"></i><br>Food Service<br>__</a>
+        <a href="#"><i class="fa fa-globe"></i><br>Logistics<br>__</a> 
+        <a href="#"><i class="fa fa-plane"></i><br>Finance<br>__</a> 
+    </div>
+    <br>
+    <div class="table-container">    
+        <h4><b>Latest Jobs</b></h4>
+        <br>
+        <a>__</a>
+        <br>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Company</th>
+                <th>Job Vacancy</th>
+                <th>City</th>
+                <th>Salary</th>
+                <th>Employment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td></td>
+                <td>11.05.2018, 4:16pm</td>
+                <td><img src="partner-01-45x40.png"></td>
+                <td>Developer</td>
+                <td>New York</td>
+                <td>$6000</td>
+                <td>Full time</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td>06.02.2016, 2:54pm</td>
+                <td><img src="partner-02-50x40.png"></td>
+                <td>Project Manager</td>
+                <td>San Diego</td>
+                <td>$4000</td>
+                <td>Full time</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td>18.01.2016, 2:42pm</td>
+                <td><img src="partner-03-40x40.png"></td>
+                <td>Truck Driver</td>
+                <td>Dallas</td>
+                <td>$2000</td>
+                <td>Part time</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td>13.04.2016, 2:54pm</td>
+                <td><img src="partner-04-76x40.png"></td>
+                <td>Js Programmer</td>
+                <td>Seattle</td>
+                <td>$7000</td>
+                <td>Full time</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td>18.05.2016, 4:32pm</td>
+                <td><img src="partner-01-45x40.png"></td>
+                <td>Developer</td>
+                <td>San Franciso</td>
+                <td>$5000</td>
+                <td>Part time</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn">VIEW ALL</button>
+    </div>
+    <div>
+        <br>
+        <br>
+        <footer>
+            <div class="last-container">
+                <div class="row">
+                  <h4>Why People Choose Us</h4>
+                  <h4>__</h4>
+                  <br>
+                  <div class="col-sm">
+                    <i class="fa-solid fa-user-plus fa-xs"></i>
+                    <b>VERIFIED EMPLOYERS</b>
+                    <h6>pay a lot of attention to the employers we cooperate with and vacancies they submit to our job board.</h6>
+                  </div>
+                  <div class="col-sm">
+                    <i class="fa-solid fa-chart-simple fa-xs"></i>
+                    <b>DEMANDED VACANCIES</b>
+                    <h6>Our catalog contains only the most demanded vacancies from American and international companies with offices in the US.</h6>
+                  </div>
+                  <div class="col-sm">
+                    <i class="fa-brands fa-blogger-b fa-xs"></i>
+                    <b>EMPLOYMENT BLOG</b>
+                    <h6>We have recently launched our employment blog where we review top rated vacancies and give useful advice to our readers.</h6>
+                  </div>
+                  </div>
+                  <br>
+                  <br>
+              </div>
+        </footer>
+    </div>
+</body>
+</html>      
+

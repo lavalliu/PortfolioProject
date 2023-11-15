@@ -3,23 +3,13 @@
 
 const prompt = require("prompt-sync")();
 
-//secret group
-
+//secret society
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
-const resultat=" ";
-
-
- for (var key in names) {
-    [firstElem]=(names[key]);
-    console.log(firstElem);
-    resultat == resultat+firstElem;
+let resultat=" ";
+for (let i = 0; i < names.length; i++)  {
+    let name=(names[i]);
+    resultat += names[i][0]; 
     console.log(resultat);
-    console.log(key);
 }
-console.log(resultat);
-secretsociety = resultat.split("").sort().join("");
-
+let secretsociety = resultat.split("").sort().join("");
 console.log(secretsociety);
-
-
-// not working

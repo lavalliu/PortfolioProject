@@ -5,36 +5,23 @@ const prompt = require("prompt-sync")();
 
 // secret WORD 
 
-let secret=prompt("Enter your secret word: ") 
 
+// a = 1
+// e = 2
+// i = 3
+// o = 4
+// u = 5
+
+let secret=prompt("Enter your secret word: ").toLowerCase();
+let vowels=['a','e','i','o','u']
+let consonnes=["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 const split=secret.split("");
 
-console.log(split);
-
-
-let index=split.indexOf("a");
-do while
-console.log(index);
-split.splice(index,1)
-console.log(split);
-
-let index1=split.indexOf("e");
-console.log(index1);
-split.splice(index1,1)
-console.log(split);
-
-let index2=split.indexOf("i");
-console.log(index2);
-split.splice(index2,1)
-console.log(split);
-
-let index3=split.indexOf("o");
-console.log(index3);
-split.splice(index3,1)
-console.log(split);
-
-console.log(split.indexOf("u"));
-let index4=split.indexOf("u");
-console.log(index4);
-split.splice(index4,1)
+for (let i=0; i<vowels.length;i++){
+        index=split.indexOf(vowels[i]);
+        replace=consonnes[i]
+        if (index!=-1) {      
+            split.splice(index,1,replace);
+        }
+}
 console.log(split);

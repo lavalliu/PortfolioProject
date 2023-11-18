@@ -1,73 +1,54 @@
 var i=0;
-
+var mynumber=1;
+var answer="N";
 function playTheGame() {
-let answer = confirm("Do you want to Play the game? ");
-if (answer === false) {
+askYesNoQuestion();
+if (false) {
     alert("No problem, Goodbye");
-} else {
-//
-        let mynumber = prompt("Enter a number between 0 and 10");
-        if (isNaN(mynumber)) {
-            alert("Sorry, you did not input a number, Goodbye");
-        } while (mynumber < 0 || mynumber > 10) {
-                alert("Sorry the number is not between 1 and 10, Please retry");
-                mynumber = prompt("Enter a number between 0 and 10");
-                } 
-        if (mynumber!=NaN) {                
-            let computerNumber = Math.round(Math.random() * 10);
-            alert("The Random Number is: " + computerNumber);
-//
-            compareNumbers(mynumber,computerNumber);
+    } else { playTheGame2()
         }
-}
-}
-// part1
-// let mynumber = prompt("Enter a number between 0 and 10");
-// if (isNaN(mynumber)) {
-//     alert("Sorry, you did not input a number, Goodbye");
-// } 
-//     for (mynumber < 0 || mynumber > 10) {
-//         let mynumber = prompt("Re-enter a number between 0 and 10");
-//     }
-//     let computerNumber = Math.round(Math.random() * 10);
-//     alert(computerNumber);
+    }
+
+
+function askYesNoQuestion(question) {
+    let answer = prompt("Do you want to Play the game? Y or N :)");
+    if (answer.toLowerCase() === "y") {
+      return true;
+    } else if (answer.toLowerCase() === "n") {
+      return false;
+    } else {
+      // If the user enters an invalid response, prompt again
+      alert("Please enter 'Y' or 'N'");
+      return askYesNoQuestion(question);
+    }
+  }
 
 function playTheGame2() {
-    let mynumber = prompt("Enter a number between 0 and 10");
+
+while ((mynumber >= 0 && mynumber < 11) && i<3) {
+    mynumber = prompt("Enter a number between 0 and 10");
     if (isNaN(mynumber)) {
         alert("Sorry, you did not input a number, Goodbye");
-    } while (mynumber < 0 || mynumber > 10) {
-            alert("Sorry the number is not between 1 and 10, Please retry");
-            mynumber = prompt("Enter a number between 0 and 10");
-            } 
+    } else if (mynumber < 0 || mynumber > 10) {
+                alert("Sorry the number is not between 1 and 10, Goodbye");
+           } else {
+            computerNumber = Math.floor(Math.random() * 11);
+            alert("The Random Number is: " + computerNumber);
+            alert(mynumber +"-" +computerNumber);
+            alert("i" + i);
+            if (mynumber==computerNumber) {
+                alert("Winner!");
+                i=3;
+            } else if (mynumber>computerNumber) {
+                    alert(`Your number is bigger then the computer’s, guess again`);
+                    i++;
 
-    let computerNumber = Math.round(Math.random() * 10);
-    alert("The Random Number is: " + computerNumber);
-    compareNumbers(mynumber,computerNumber)
-}
+             } else if (mynumber<computerNumber) {
+                    alert(`Your number is smaller then the computer’s, guess again`);
+                    i++;
 
-function compareNumbers(mynumber,computerNumber) {
-// let i=0;
-while (i<4) {
-    alert(mynumber);
-    alert(computerNumber);
-    alert(i);
-    if (mynumber==computerNumber) {   
-        alert("WINNER");
-        i=4;
-    }
-    if (mynumber>computerNumber) {
-        alert(`Your number is bigger then the computer’s, guess again`);
-        i=i+1;
-        alert("i :" +i);
-        playTheGame2();
-    }
-    if (mynumber<computerNumber) {
-        alert(`Your number is smaller then the computer’s, guess again`);
-        i=i+1;
-        alert("i :" +i);
-        playTheGame2();
-    }
+                }
+            }
 }
-alert("Out of Chances");
+ 
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+
+<h2>HTML DRAG AND DROP DEMO</h2>
+
+<div id="box">
+  
+<!-- In the HTML  -->
+<div id="square1" draggable="true" ondragstart="dragStart(event)">square1</div>
+<div id="square2" draggable="true" 
+     ondragstart="dragStart(event)">square2</div>
+
+<div id="square3"
+     ondrop="dragDrop(event)"
+     ondragover="allowDrop(event)"
+     ondragenter="allowEnter(event)"
+     ondragleave="allowLeave(event)">square3</div>
+  
+  
+<!-- Everything in JS -->
+<!-- <h2>HTML DRAG AND DROP DEMO</h2>
+
+<div id="box">
+  <div id="square1">square1</div>
+  <div id="square2">square2</div>
+  <div id="square3">square3</div>
+</div> -->
+
+</body>
+</html>

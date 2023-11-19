@@ -1,3 +1,9 @@
-function number(1) {
+function number(num) {
+
+}
+function operator(operator) {
+
+}
+function equal() {
 
 }

@@ -3,7 +3,7 @@
 
 const prompt = require("prompt-sync")();
 
-//secret society
+//secret group
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 let resultat=" ";
 for (let i = 0; i < names.length; i++)  {

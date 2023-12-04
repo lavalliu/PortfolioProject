@@ -5,28 +5,25 @@ const prompt = require("prompt-sync")();
 
 //checking the BMI
 
-let detail1 = {
+const detail1 = {
   fullname: "Laval Liu",
   mass: 72,
-  height: 185,
+  height: 1.85,
 };
-let detail2 = {
+const detail2 = {
   fullname: "Joey Liu",
   mass: 82,
-  height: 182,
+  height: 1.82,
 };
-
-console.log(detail1(mass));
-function calculateBMI (detail1(mass), detail1(height)) {
-
-  // weight = Number (weight);
-  // height = Number (height);
-// calculate the BMI using the formula
-let bmi = weight / (height * height);
-// round the result to two decimal places
-bmi = bmi.toFixed (2);
-// return the BMI value
-console.log(bmi);
+function calculateBMI (weight,height) {
+let bmi = weight/(height*height);
+bmi=bmi.toFixed (2);
+return(bmi);
 }
-
-//not completed will wait for function session first
+let bmi1=calculateBMI(detail1.mass,detail1.height);
+let bmi2=calculateBMI(detail2.mass,detail2.height);
+if (bmi1>bmi2) {
+   console.log(detail1.fullname +" has the largest BMI")  
+} else {
+   console.log(detail2.fullname +" has the largest BMI")  
+}

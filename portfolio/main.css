@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+html,h1{
+    font-family: "Raleway";
+    color: black;
+
+}
+.header {
+	height: 100vh;
+	background-image: url('headerback.jpg');
+ 	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+    padding: 20em;
+    font-weight: bold;
+} 
+.header p {
+
+    padding-right: 700px;
+    font-size: 20px;
+    color: black;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+ul {
+    list-style: none;
+    /* float: right; */
+}
+.main-nav {
+    background-color: rgb(31, 92, 138);
+    font-size: 20px;
+    margin: 0;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /*Full width */ 
+}
+a {
+    color: white;
+    text-decoration: none !important;
+}
+p {
+    font-size: 30px; 
+}
+h1 {
+    font-size: 50px;
+    color: rgb(31, 92, 138);
+}
+h4 {
+    font-size: 25px;
+}
+li {
+    padding: 20px;
+}
+.btn1 {
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    background-color: rgb(31, 92, 138);
+    border-color: rgb(31, 92, 138);
+    color: white;
+}
+
+.contactdetails {
+    width: 600px;
+}
+.btn2 {
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgb(31, 92, 138);
+    border-color: rgb(31, 92, 138);
+    color: white;
+    width: 600px;
+    height: 40px;
+}
+section{
+    padding: 250px 0px 0px 100px;
+    align-items: center;
+}
+
+
+.blogtext {
+    font-size: 20px;
+}
+
+.aboutdetail {
+    font-size: 20px;
+    text-align: justify;
+}
+.aboutface {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+figcaption {
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+}
+
+.text-center .logos {
+   align-items: center;
+}
+
+.teamimage {
+    width: 300px;
+}
+
+.teamtitle {
+    background-color: rgb(31, 92, 138);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-left-radius: 93%;
+}
+.teamtext {
+    color: grey;
+    font-size: 20px;
+}
+
+img {
+    width: 400px; 
+    height: 250px; 
+}
+
+.developer {
+    color: rgb(31, 92, 138);
+    font-size: 20px;
+}
+
+.intouch {
+    color: rgb(31, 92, 138);
+    font-size: 30px;
+}
+
+.reservations-container {
+    border: solid 1px black;
+}
+.col-md-4 {
+    border: solid 1px black;
+}

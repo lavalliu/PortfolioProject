@@ -22,24 +22,33 @@ button {
     border: none;
     margin-bottom: 5px;
 }
+
 .figure {
     background-color: grey;
-
     /* border: none; */
+}
+.figure:active {
+    background-color: rgb(68, 68, 68);
 }
 .operator {
     background-color: orange;
-
+}
+.operator:active {
+    background-color: rgb(202, 132, 2);
 }
 .reset {
     background-color: rgb(68,108,179);
-
     width:155px;
     height:40px;
 }
+.reset:active {
+    background-color: rgb(38, 68, 121);
+}
 .clear {
     background-color: red;
-
     width:155px;
     height:40px;
+}
+.clear:active {
+    background-color: rgb(130, 20, 20);
 }

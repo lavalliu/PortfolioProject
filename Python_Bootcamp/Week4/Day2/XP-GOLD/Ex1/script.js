@@ -5,7 +5,15 @@ const prompt = require("prompt-sync")();
 
 // Is_Blank
 
-let string=" ";
-if 
-console.log(isBlank('')); --> true
-console.log(isBlank('abc')); --> false
+let string=prompt("String to test :")
+
+console.log(isBlank(string));
+
+function isBlank() {
+    if (string=="") {
+        return true;
+    }
+    if (string!=="") {
+        return false;
+    }
+}

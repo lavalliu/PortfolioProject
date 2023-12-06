@@ -53,6 +53,7 @@ let reservations=[];
         reservations.push(reservation);
         document.getElementById("myForm").reset();
         localStorage.setItem('Reservation', JSON.stringify(reservations));
+        alert("Thank you for Reserving at the ROYAL RESTAURANT. The Team will send you a confirmation message shortly");
 }
 
 //data validation input on the form

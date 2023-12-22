@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sect">
+        <div class="division">
+            <button id="jsstyle" onclick="XRespondClick()">Style</button> 
+        </div>
+    </section>
+    <style>
+        /* section { 
+            border: 2px solid black;
+            padding: 5px;
+        }
+        div { border : 2px solid blue;
+            padding: 5px;
+        }
+        button { border : 2px solid red} */
+    </style>
+
+    <script>
+       let x = document.querySelector("#sect");
+       let y = document.querySelector("#division");
+       let z = document.querySelector(".jsstyle");
+
+ // when set to true the propagation is from innermost element to the outermost element 
+        //Result if I click on the button
+        // Alert : BTN is Clicked
+        // Alert : DIV is Clicked
+        // Alert : SECTION is Clicked
+        // --> The event is triggered from the element that its clicked to the top
+       x.addEventListener("click", XRespondClick); 
+       y.addEventListener("click", YRespondClick); 
+       z.addEventListener("click", ZRespondClick); 
+
+
+       function XRespondClick(event) { 
+           x.style.backgroundColor="red";
+       }    
+
+       function YRespondClick() { 
+            y.style.backgroundColor="blue";
+       }    
+
+        function ZRespondClick() { 
+            x.style.backgroundColor="black";
+       }  
+
+
+
+    </script>
+
+</body>
+</html>

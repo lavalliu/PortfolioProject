@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<select id="school-type"> 
+    <option value="middleschool">Middle School</option>
+    <option value="university">University</option>
+    <option value="college">College</option>
+</select>
+</body>
+</html>
+
+<script>
+
+//•  Then, you need to create a JavaScript file that contains the function to perform the required actions. You need to define the function with a name, such as task, and use the document.getElementById method to get a reference to the <select> element by its id. For example:
+
+// Define the function
+function task() {
+// Get the select element by id
+var select = document.getElementById("school-type");
+// Perform the required actions
+}
+
+//•  Inside the function, you need to do the following:
+
+//•  Get the value of the 2nd option. You can use the options property of the <select> element to get a collection of all the <option> elements, and then use the index [1] to access the second one. You can use the value property of the <option> element to get its value. For example:
+
+// Get the value of the 2nd option
+var secondOption = select.options[1].value;
+// Display the value
+console.log(secondOption); // university
+
+//•  Add a new option with the value 'Work' at the end of the select form. You can use the createElement method to create a new <option> element, and then use the value and text properties to set its value and text. You can use the appendChild method to append the new element to the <select> element. For example:
+
+// Create a new option element
+var newOption = document.createElement("option");
+// Set its value and text
+newOption.value = "work";
+newOption.text = "Work";
+// Append it to the select element
+select.appendChild(newOption);
+
+//•  Add a new option with the value 'Primary School' at the beginning of the select form. You can use the same steps as above to create a new <option> element, and then use the insertBefore method to insert the new element before the first child of the <select> element. For example:
+
+// Create a new option element
+var newOption = document.createElement("option");
+// Set its value and text
+newOption.value = "primaryschool";
+newOption.text = "Primary School";
+// Insert it before the first child of the select element
+select.insertBefore(newOption, select.firstChild);
+
+//•  Change 'College' as selected. You can use the selectedIndex property of the <select> element to set the index of the selected option. You can use the length property of the options collection to get the number of options, and then subtract one to get the index of the last option. For example:
+
+// Set the index of the selected option to the last one
+select.selectedIndex = select.options.length - 1;
+
+//•  Add a button that alert the choice selected. You can use the createElement method to create a new <button> element, and then use the text property to set its text. You can use the onclick property to assign a function that runs when the button is clicked. Inside the function, you can use the alert method to display a message box with the text of the selected option. You can use the selectedOptions property of the <select> element to get a collection of the selected options, and then use the index [0] to access the first one. You can use the text property of the <option> element to get its text. You can use the appendChild method to append the button element to the <body> element. For example:
+
+// Create a new button element
+var button = document.createElement("button");
+// Set its text
+button.text = "Alert";
+// Assign a function to run when the button is clicked
+button.onclick = function() {
+// Get the text of the selected option
+var selectedText = select.selectedOptions[0].text;
+// Display a message box with the text
+alert("You selected: " + selectedText);
+};
+// Append the button to the body element
+document.body.appendChild(button);
+
+//Here is the complete JavaScript code that contains the function to perform the required actions:
+
+// Define the function
+function task() {
+// Get the select element by id
+var select = document.getElementById("school-type");
+// Get the value of the 2nd option
+var secondOption = select.options[1].value;
+// Display the value
+console.log(secondOption); // university
+// Create a new option element
+var newOption = document.createElement("option");
+// Set its value and text
+newOption.value = "work";
+newOption.text = "Work";
+// Append it to the select element
+select.appendChild(newOption);
+// Create a new option element
+var newOption = document.createElement("option");
+// Set its value and text
+newOption.value = "primaryschool";
+newOption.text = "Primary School";
+// Insert it before the first child of the select element
+select.insertBefore(newOption, select.firstChild);
+// Set the index of the selected option to the last one
+select.selectedIndex = select.options.length - 1;
+// Create a new button element
+var button = document.createElement("button");
+// Set its text
+button.text = "Alert";
+// Assign a function to run when the button is clicked
+button.onclick = function() {
+// Get the text of the selected option
+var selectedText = select.selectedOptions[0].text;
+// Display a message box with the text
+alert("You selected: " + selectedText);
+};
+// Append the button to the body element
+document.body.appendChild(button);
+}
+</script>

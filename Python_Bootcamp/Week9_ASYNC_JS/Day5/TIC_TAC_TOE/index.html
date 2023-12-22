@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        Tic Tac Toe Game
+        <br>
+        <div class="choice">Choose with which sign you will start the game :</div>
+        <br>
+        <div class="grid">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+</body>
+<script>
+let tictac=[["","",""],["","",""],["","",""]];
+const choice_x='x'
+const choice_o='o'
+const winCombos = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [6, 4, 2]
+]
+function write() {
+
+}
+
+startGame()
+
+restartButton.addEventListener('click', startGame)
+
+function startGame() {
+	isPlayer_O_Turn = false
+	cellElements.forEach(cell => {
+		cell.classList.remove(PLAYER_X_CLASS)
+		cell.classList.remove(PLAYER_O_CLASS)
+		cell.removeEventListener('click', handleCellClick)
+		cell.addEventListener('click', handleCellClick, { once: true })
+	})
+	setBoardHoverClass()
+	winningMessageElement.classList.remove('show')
+}
+</script>
+</html>

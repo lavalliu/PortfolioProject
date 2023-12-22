@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
+</body>
+<style>
+.student_list  {
+    color: blue;
+}
+
+</style>
+<script>
+    // display the DIV content
+    // const div = document.getElementById("container");
+    // console.log("Div : " , div);
+
+    // replace Pete with Richard using DOM
+    // let ul=document.querySelector(".list");
+    // let li=ul.querySelector("li:nth-child(2)");
+    // li.textContent="Richard";
+
+    //delete Sarah 
+    // let uls=document.querySelectorAll(".list");
+    // let ul=uls[1];
+    // console.log(ul.innerHTML);
+    // let li=ul.querySelector("li:nth-child(2)");
+    // li.parentNode.removeChild(li);
+
+    //Change each first name of the two <ul>'s to your name. (Hint : use a loop)
+    // let uls=document.querySelectorAll(".list");
+    // let ulLength=(document.querySelectorAll(".list").length);
+    // for (let x=0; x<ulLength; x++) {
+    //     let li=uls[x].querySelector("li:nth-child(1)");
+    //     li.textContent="Laval";
+    // }
+
+    // Add a class called student_list to both of the <ul>'s.
+        // let uls=document.querySelectorAll(".list");
+        let uls=document.getElementsByClassName("list");
+        console.log(uls);
+        uls.classList.add("student_list");
+
+</script>
+</html>

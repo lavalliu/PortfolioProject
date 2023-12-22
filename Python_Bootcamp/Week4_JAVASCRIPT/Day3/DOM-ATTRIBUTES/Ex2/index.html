@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <p id ='text'>DOM Attributes! Yeahhh !!</p>  
+</body> 
+</html> 
+
+<script>
+
+//To modify the style of the paragraph text through JavaScript code, you need to do the following:
+
+//•  First, you need to get a reference to the paragraph element using the document.getElementById method. This method takes the id attribute of the element as a parameter and returns the element object. For example:
+
+// Get the paragraph element by id
+var p = document.getElementById("text");
+
+//•  Next, you need to access the style property of the element object. This property is an object that contains the inline CSS styles of the element. You can use the dot notation or the bracket notation to access or modify the style properties. For example:
+
+// Modify the font size using the dot notation
+p.style.fontSize = "20px";
+// Modify the font family using the bracket notation
+p.style["fontFamily"] = "Arial";
+
+//•  Finally, you need to assign the desired values to the style properties. You can use any valid CSS values, such as pixels, percentages, colors, etc. For example:
+
+// Modify the color using a named color
+p.style.color = "red";
+// Modify the background color using a hexadecimal color
+p.style.backgroundColor = "#FFFF00";
+
+//Here is the complete JavaScript code that modifies the style of the paragraph text:
+
+// Get the paragraph element by id
+var p = document.getElementById("text");
+// Modify the font size
+p.style.fontSize = "20px";
+// Modify the font family
+p.style.fontFamily = "Arial";
+// Modify the color
+p.style.color = "red";
+// Modify the background color
+p.style.backgroundColor = "#FFFF00";
+</script>

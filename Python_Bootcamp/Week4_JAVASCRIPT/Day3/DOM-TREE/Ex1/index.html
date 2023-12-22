@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div>Users:</div>
+  <ul>
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+</body>
+</html>
+
+
+<script>
+// Get all div elements
+var divs = document.getElementsByTagName("div");
+// Access the first one
+var firstDiv = divs[0];
+// Display its content
+console.log(firstDiv.innerHTML); // Users:
+
+//•  You can use the document.querySelector method to get the first element that matches a CSS selector, and then use the tag name div as the selector. For example:
+
+// Get the first div element
+var firstDiv = document.querySelector("div");
+// Display its content
+console.log(firstDiv.innerHTML); // Users:
+
+//•  You can use the document.body.firstChild property to get the first child node of the <body> element, and then check if it is a <div> element. For example:
+
+// Get the first child node of the body
+var firstNode = document.body.firstChild;
+// Check if it is a div element
+if (firstNode.nodeName === "DIV") {
+// Display its content
+console.log(firstNode.innerHTML); // Users:
+}
+</script>

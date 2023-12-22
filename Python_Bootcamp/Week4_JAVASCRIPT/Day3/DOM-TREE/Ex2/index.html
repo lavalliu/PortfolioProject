@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<html>
+<body>
+  <div id="container">Users:</div>
+  <ul class="list">
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+  <ul class="list">
+    <li>Sarah</li>
+    <li>Dan</li>
+  </ul>
+</body>
+</html>
+
+<script>
+
+    // Get the div element by id
+var div = document.getElementById("container");
+// Display its content
+console.log(div.innerHTML); // Users:
+
+//•  You can use the document.querySelector method to get the first element that matches a CSS selector, and then use the tag name div as the selector. For example:
+
+// Get the first div element
+var div = document.querySelector("div");
+// Display its content
+console.log(div.innerHTML); // Users:
+
+// 1. 
+// The ul nodes, and render all of it's children one by one
+// •  You can use the document.getElementsByClassName method to get a collection of all elements with the class list, which are the <ul> elements. Then, you can use a for loop to iterate over the collection and access each element. Inside the loop, you can use the children property to get a collection of the child nodes of each element, which are the <li> elements. Then, you can use another for loop to iterate over the children and display their content. For example:
+
+// Get all ul elements by class name
+var uls = document.getElementsByClassName("list");
+// Loop over the ul elements
+for (var i = 0; i < uls.length; i++) {
+// Get the current ul element
+var ul = uls[i];
+// Get the child nodes of the ul element
+var lis = ul.children;
+// Loop over the li elements
+for (var j = 0; j < lis.length; j++) {
+// Get the current li element
+var li = lis[j];
+// Display its content
+console.log(li.innerHTML); // John, Pete, Sarah, Dan
+}
+}
+
+//•  You can use the document.querySelectorAll method to get a collection of all elements that match a CSS selector, and then use the tag name ul as the selector. Then, you can use a for loop to iterate over the collection and access each element. Inside the loop, you can use the querySelectorAll method again to get a collection of all elements that match a CSS selector, and then use the tag name li as the selector. Then, you can use another for loop to iterate over the collection and display their content. For example:
+
+// Get all ul elements
+var uls = document.querySelectorAll("ul");
+// Loop over the ul elements
+for (var i = 0; i < uls.length; i++) {
+// Get the current ul element
+var ul = uls[i];
+// Get all li elements inside the ul element
+var lis = ul.querySelectorAll("li");
+// Loop over the li elements
+for (var j = 0; j < lis.length; j++) {
+// Get the current li element
+var li = lis[j];
+// Display its content
+console.log(li.innerHTML); // John, Pete, Sarah, Dan
+}
+}
+
+// 1. 
+// The first li of each ul
+// •  You can use the document.getElementsByClassName method to get a collection of all elements with the class list, which are the <ul> elements. Then, you can use a for loop to iterate over the collection and access each element. Inside the loop, you can use the firstElementChild property to get the first child element of each element, which is the first <li> element. For example:
+
+// Get all ul elements by class name
+var uls = document.getElementsByClassName("list");
+// Loop over the ul elements
+for (var i = 0; i < uls.length; i++) {
+// Get the current ul element
+var ul = uls[i];
+// Get the first li element inside the ul element
+var li = ul.firstElementChild;
+// Display its content
+console.log(li.innerHTML); // John, Sarah
+}
+
+//•  You can use the document.querySelectorAll method to get a collection of all elements that match a CSS selector, and then use the tag name ul as the selector. Then, you can use a for loop to iterate over the collection and access each element. Inside the loop, you can use the querySelector method to get the first element that matches a CSS selector, and then use the tag name li as the selector. For example:
+
+// Get all ul elements
+var uls = document.querySelectorAll("ul");
+// Loop over the ul elements
+for (var i = 0; i < uls.length; i++) {
+// Get the current ul element
+var ul = uls[i];
+// Get the first li element inside the ul element
+var li = ul.querySelector("li");
+// Display its content
+console.log(li.innerHTML); // John, Sarah
+}
+
+</script>

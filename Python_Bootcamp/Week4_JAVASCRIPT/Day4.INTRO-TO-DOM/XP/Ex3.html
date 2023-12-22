@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar {
+            background-color: rgb(25,84,117);
+            width: 100%;
+            position: fixed;
+            height: 65px;
+            z-index: 9;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        Test        
+    </nav>
+</body>
+<script>
+(function () {
+    let user=prompt("Enter your Name : ")
+    const newDiv=document.createElement('div');
+    const parent = document.querySelector("body");
+    parent.appendChild(newDiv);
+    newDiv.style.backgroundColor = "red";
+    newDiv.style.color = "white";
+
+
+
+    newDiv.innerHTML="user";
+
+})();
+</script>
+</html>

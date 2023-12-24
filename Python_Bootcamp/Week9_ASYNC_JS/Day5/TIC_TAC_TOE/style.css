@@ -8,23 +8,26 @@
 }
 .grid {
     display: grid;
-    grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;
-    /* border: solid 1px black; */
+    grid-template-columns: 125px 125px 125px;
+    grid-template-rows: 125px 125px 125px;
     justify-content: center;
     row-gap: 2px;
     column-gap: 2px;
 }
+.grid .cell div:first-child {
+    border-top: none;
+}
+.grid .cell div:last-child {
+    border-bottom: none;
+}
 .cell {
-    /* display: flex; */
-    /* align-items: center;
-    justify-content: center; */
-    border-right: none;
+    /* border-right: none;
     border-bottom: none;
     border-left: none;
-    border-top: none;
+    border-top: none; */
     border: solid 2px black;
 }
 .choice{
     font-size: 30px;
+    margin-bottom: 15px;
 }

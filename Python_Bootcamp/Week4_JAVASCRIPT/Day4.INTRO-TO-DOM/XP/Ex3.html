@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- done by lecturer in class -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -16,23 +17,32 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        Test        
-    </nav>
+
+    <div id="navBar">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Friends</a></li>
+            <li><a href="#">Messenger</a></li>
+            <li><a href="#">My Pics</a></li>
+        </ul>
+    </div>
 </body>
 <script>
-(function () {
-    let user=prompt("Enter your Name : ")
-    const newDiv=document.createElement('div');
-    const parent = document.querySelector("body");
-    parent.appendChild(newDiv);
-    newDiv.style.backgroundColor = "red";
-    newDiv.style.color = "white";
+   
+        navbar=document.querySelector('#navBar').setAttribute('id','socialNetworkNavigation');
+        
+        idElement=document.createElement('li');
+        anchorElement=document.createElement('a');
+        anchorElement.setAttribute('href','#');
+        anchorElement.innerHTML='Logout';
+        idElement.appendChild(anchorElement);
 
 
+        ulElement=document.querySelector('#socialNetworkNavigation').firstElementChild;
+        ulElement.appendChild(idElement);
 
-    newDiv.innerHTML="user";
 
-})();
 </script>
 </html>
+

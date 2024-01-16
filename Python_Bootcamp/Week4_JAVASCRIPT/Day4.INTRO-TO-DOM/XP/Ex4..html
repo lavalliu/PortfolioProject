@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- done by lecturer in class -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+    <body>
+        <div id="books" class="listBooks">
+            <table id="myTable">
+                <tr>
+                    <th>title</th>
+                    <th>author</th>
+                    <th>image</th>
+                    <th>alreadyRead</th>
+                </tr>
+
+                <!-- <tr>
+                    <td>Harry potter</td>
+                    <td>Jk rowling</td>
+                    <td>Image link</td>
+                    <td>true</td>
+
+                </tr> -->
+            </table>
+        </div>
+    </body>
+
+    <script>
+    //    book1={
+    //     title: 'happy potter', 
+    //     author: 'Jk rowling',
+    //     image: 'link1',
+    //     read: true
+    //    }
+    //    book2={
+    //     title: 'happy potter', 
+    //     author: 'Jk rowling',
+    //     image: 'link1',
+    //     read: true
+    //    }
+
+    //    books=[book1,book2];
+
+    class Book{
+        constructor(title,author,image,read){
+            this.title=title;
+            this.author=author;
+            this.image=image;
+            this.read=read;
+        }
+    }
+
+    books=[];
+    books.push(new Book('harry potter','Jk rowling','link1',true));
+    books.push(new Book('Lord of the rings','Tolkien','link2',false));
+    books.push(new Book('Lord of the rings 2','Tolkien','link3',false));
+    
+    console.log(books);
+
+    table=document.querySelector('#myTable');
+
+    for (book of books){
+        newRow=document.createElement('tr');
+
+        title=document.createElement('td');
+        title.innerHTML=book.title;
+        newRow.appendChild(title);
+
+        author=document.createElement('td');
+        author.innerHTML=book.author;
+        newRow.appendChild(author);
+
+        image=document.createElement('td');
+        image.innerHTML=book.image;
+        newRow.appendChild(image);
+
+        read=document.createElement('td');
+        read.innerHTML=book.read;
+        newRow.appendChild(read);
+
+        table.appendChild(newRow);
+    }
+    
+
+
+    </script>
+
+</html>

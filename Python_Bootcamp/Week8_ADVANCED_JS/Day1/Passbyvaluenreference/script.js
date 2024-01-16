@@ -3,7 +3,7 @@
 
 // let c = { greeting: 'Hey!' }; / c here is an object and both c.object and d.object refers to the same address
 // whereas c='Hey!' is a primitive address and together with d they refer to different address 
-let c = 'Hey!';
+let c = 'ok';
 let d;
 
 d = c;

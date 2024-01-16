@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCISE 4 - ADVANCED FUNCTIONS AND OBJECTS - WEEK 8 : WELCOME</title>
+    <style>
+        .navbar {
+            background-color: red;
+            text-align: center;
+            padding: 10px;
+        }
+        .center {
+            background-color: blue;
+            text-align: center;
+            padding: 10px;
+            font-size: 70px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <form id="loginForm">
+              <input id="username" type="text" placeholder="Username" name="username">
+              <!-- <input type="text" placeholder="Password" name="psw"> -->
+              <button type="submit">Login</button>
+            </form>
+        </div>
+    </nav>
+</body>
+<script>
+(function (username, profilePic) {
+    var loginForm = document.getElementById("loginForm");
+    // Add an event listener to the form element
+    loginForm.addEventListener("submit", function(event) {
+        // Prevent the default behavior of the form
+        event.preventDefault();
+        // Get the value of the input field with id="username"
+        if (loginForm.username.value) {
+            var userName = document.getElementById("username").value;
+            var profilePic = "profile.jpg"
+            var navbar = document.getElementsByClassName("navbar")[0];
+            // Create a new div element
+            var profileDiv = document.createElement("div");
+            // Set the class name of the profileDiv to "profile"
+            profileDiv.className = "profile";
+
+            // Create a new span element
+            var profileName = document.createElement("span");
+            // Set the text content of the profileName to the userName parameter
+            profileName.textContent = userName;
+            // Append the profileName to the profileDiv
+            profileDiv.appendChild(profileName);
+
+            // Create a new img element
+            var profileImg = document.createElement("img");
+            // Set the src attribute of the profileImg to the profilePic parameter
+            profileImg.src = profilePic;
+            // Set the alt attribute of the profileImg to the userName parameter
+            profileImg.alt = userName;
+            // Append the profileImg to the profileDiv
+            profileDiv.appendChild(profileImg);
+
+            // Append the profileDiv to the navbar
+            navbar.appendChild(profileDiv);
+        } else {
+            // Display an alert to input username
+            alert("Please enter your username to login");
+        }
+    });
+}());
+</script>
+</html>
+
+

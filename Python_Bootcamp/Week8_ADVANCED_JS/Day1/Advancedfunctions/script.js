@@ -15,7 +15,7 @@
 //exercise 2
 // each time the function is called the counter increases by 1
 // it starts at 0 and the function is called 3 times
-// it will dusplay 1, then 2 then 3 
+// it will display 1, then 2 then 3 
 
 //   let add = (function () {
 //     let counter = 0;

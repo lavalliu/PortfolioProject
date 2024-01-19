@@ -6,18 +6,15 @@ const prompt = require("prompt-sync")();
 
 //Chihuahua
 
-const newDog="Chihuahua"
+const newDog="Chihuahua";
 
-console.log(newDog.length)
+console.log(newDog.length);
+console.log(newDog.toUpperCase());
+console.log(newDog.toLowerCase());
 
-console.log(newDog.toUpperCase())
-console.log(newDog.toLowerCase())
-
-
-
-if (newDog=="Chihuahua") {
-    console.log("I Love Chihuahua, It's my favorite dog breed")
+if (newDog == "Chihuahua") {
+    console.log("I Love Chihuahua, It's my favorite dog breed");
 } else {
-    console.log("I Don't care I prefer cats")
+    console.log("I Don't care I prefer cats");
 }
 

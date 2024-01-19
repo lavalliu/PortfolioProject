@@ -1,11 +1,6 @@
-// Step 1: npm init
-// Step 2: npm install prompt-sync
-
 const prompt = require("prompt-sync")();
 
-
 //group chat
-
 
 // const user = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
 const user = [];

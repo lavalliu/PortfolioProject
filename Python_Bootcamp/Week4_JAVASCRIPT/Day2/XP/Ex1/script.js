@@ -1,7 +1,7 @@
 //EX1 Information
 
 function infoAboutMe() {
-    console.log("My name is Laval, I am 55 years old and I like fishkeeping Koi")
+    console.log("My name is Laval, I am 15 years old and I like fishkeeping");
 }
 
 infoAboutMe();

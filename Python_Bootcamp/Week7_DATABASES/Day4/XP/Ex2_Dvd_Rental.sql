@@ -29,11 +29,11 @@
 -- 	WHERE customer.first_name='Matthew' AND customer.last_name='Mahan' AND payment.amount>4
 -- 	AND (rental.return_date>'2005-07-28' AND rental.return_date<'2005-08-01'); 
 
--- incomplete
-SELECT DISTINCT title FROM film
-	JOIN inventory ON inventory.film_id=film.film_id
-	JOIN rental ON rental.inventory_id=inventory.inventory_id
-	JOIN customer ON customer.customer_id=rental.customer_id
-	JOIN payment ON payment.customer_id=customer.customer_id
+-- 5.4
+SELECT * FROM inventory
+	INNER JOIN film ON film.film_id=inventory.film_id
+	INNER JOIN rental ON rental.inventory_id=inventory.inventory_id
+	INNER JOIN customer ON customer.customer_id=rental.customer_id
 	WHERE customer.first_name='Matthew' AND customer.last_name='Mahan'
-	AND LOWER(film.description) LIKE '%boat%' ORDER BY replacement_cost DESC; 
+	AND (film.description ILIKE '%boat%' OR film.title ILIKE'%boat%') 
+	ORDER BY film.replacement_cost DESC LIMIT 1; 

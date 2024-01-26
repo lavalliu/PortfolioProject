@@ -19,6 +19,7 @@
 -- ALTER TABLE product_orders ADD user_id integer;
 -- INSERT INTO users (user_id, user_name) VALUES (1, 'Laval Liu'), (2, 'MIchael Jordan'), (3, 'Larissa Norman');
 
+-- incomplete
 -- 4.2 (NOT WORKING) ALTER TABLE users ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES product_orders (user_id);
 
 -- UPDATE product_orders SET user_id=1 WHERE order_no=1;

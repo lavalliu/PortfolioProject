@@ -1,3 +1,5 @@
+// Exercise 1 : Location
+
 const person = {
     name: 'John Doe',
     age: 25,

@@ -1,3 +1,4 @@
+// FIND THE SUM
 
 const prompt=require('prompt-sync')();
 

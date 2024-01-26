@@ -1,6 +1,8 @@
 
 const prompt=require('prompt-sync')();
 
+//KG & GRMS
+
 let a = parseInt(prompt("Enter weight in Kilograms : "));
 
 

@@ -8,7 +8,7 @@ function isDivisible(divNum) {
         }
         i++
     } 
-    console.log(theSum);
+    console.log("Sum : ", theSum);
 }
 
 isDivisible(3);

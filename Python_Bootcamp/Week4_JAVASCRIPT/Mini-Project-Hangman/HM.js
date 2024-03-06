@@ -35,7 +35,7 @@ do {
     position=swarray.indexOf(letter);
     switch (position) {
         case -1:
-            if (incorrectlist.indexOf(letter)===0) {
+            if (incorrectlist.indexOf(letter)==0) {
                 console.log("Letter has already been inputted previously");
                 } else {
             console.log("Letter entered is not one of missing letters");
@@ -45,7 +45,7 @@ do {
                 }
             break;
         default:
-            if (correctlist.indexOf(letter)===0) {
+            if (correctlist.indexOf(letter)==0) {
                 console.log("Letter has already been inputted previously");
                 } else {
                 console.log("Well done. Letter entered appears once or more in the secret word, please continnue");
@@ -63,11 +63,11 @@ do {
                 console.log(swarray);
                 console.log(displayArray);
                 }
-            if (displayArray.indexOf("_")===-1) {
+            if (displayArray.indexOf("_")==-1) {
                 winner=true;
                 console.log("CONGRATULATIONS WE HAVE A WINNER")
                 }
             break;
 }
-} while (numofguess<9 && winner===false);
+} while (numofguess<9 && winner==false);
 

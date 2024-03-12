@@ -1,0 +1,99 @@
+body {
+    font-family: "helvetica neue", helvetica;
+}
+h1 {
+    text-align: center;
+    align-items: center;
+}
+.quote {
+    font-size: 30px;
+    text-align: left;
+    padding: 0px 40px 0px 40px;
+    color: rgb(108,117,125);
+}
+.author {
+    font-size: 20px;
+    text-align: right;
+    padding: 0px 40px 40px 40px;
+    color: rgb(100,182,172);
+}
+.container1 {
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    border: 50px solid rgb(176,158,153);
+    background-color: rgb(216,207,204);
+    margin: auto;
+}
+.form-container {
+    align-items: center;
+    text-align: center;
+    width: 800px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
+.button {
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    margin-top: 30px;
+    background-color: rgb(100,182,172);
+    border: 1px solid aqua;
+    padding: 10px;
+    color: white;
+}
+.container1 a {
+    align-items: center;
+    text-align: center;
+}
+.container1 h3:first-letter {
+    font-size: 50px;
+}
+.formlabel {
+    color: rgb(176,158,153);
+}
+.forminput {
+    border: 2px solid rgb(176,158,153);
+    border-radius: 5px;
+}
+.filter-container {
+    align-items: center;
+    text-align: center;
+    font-family: "helvetica neue", helvetica;
+    background-color: rgb(44,51,50);
+    color: rgba(255, 255, 255, 0.601);
+    /* width: 400px; */
+    height: 450px;
+    padding-top: 30px;
+}
+.filter-container h3 {
+    color: rgb(58, 241, 183);
+}
+.filter-container .author2 {
+    color: white;
+}
+.prev:hover, .next:hover {
+    background-color: white;
+    color: rgb(44,51,50);
+    cursor: pointer;
+}
+.buttons {
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 500px;
+    height: 150px;
+    /* background-color: rgb(176,158,153); */
+    /* align-items: center;
+    text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+}
+.button2 {
+    text-align: left;
+    padding-left: 20px;
+}

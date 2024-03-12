@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quote Generator</h1>
+    <div class="container1">
+        <button class="button" onclick="randomQuote()">Generate Quote</button>
+        <h3 class="quote" id="quote"></h3>
+        <div class="author" id="author"></div>
+    </div>
+        <!-- <div class="buttons">
+            <button type="button" class="button2" id="button2" onclick="characters(event)"></button>
+            <p id="resultbt2"></p>
+            <button type="button" class="button2" id="button3" onclick="allCharac(event)"></button>
+            <p id="resultbt3"></p>
+            <button type="button" class="button2" id="button4" onclick="numWords(event)"></button>
+            <p id="resultbt4"></p>
+            <button type="button" class="button2" id="button5" onclick="numLikes(event)"></button>
+            <p id="resultbt5"></p>
+        </div> -->
+
+    <form class="form-container" action="">
+        <label class='formlabel' for="myquote">Quote :</label><br>
+        <input class='forminput' type="text" id="myquote" name="myquote" size="100"><br>
+        <label class='formlabel' for="myauthor">Author:</label><br>
+        <input class='forminput' type="text" id="myauthor" name="myauthor" size="100"><br><br>
+        <button class="submit" onclick="storeInput(event)">Submit</button>
+    </form>
+    <div class="filter-container">
+        <h1>My Quotes</h1>
+        <h2>Motivational, Inspirational and more!</h2>
+        <br>
+        <h3 class="quote2" id="quote2"></h3>
+        <div class="author2" id="author2"></div>
+        <br>
+        <label for="mysearch">Enter an Author's Name</label>
+        <input type="mysearch" id="mysearch" name="mysearch">
+        <button class="mysearch" onclick="searchQuote(event)">Search</button>
+        <br><br>
+        <a class="prev" onclick="plusSlides(-1)">< Previous |</a>
+        <a class="next" onclick="plusSlides(+1)">| Next ></a>
+    </div>
+</body>
+    <script src="script.js"></script>
+
+</html>

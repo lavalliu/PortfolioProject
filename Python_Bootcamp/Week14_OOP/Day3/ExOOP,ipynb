@@ -1,0 +1,18 @@
+class Door():
+    def __init__(self, status):
+        self.is_opened = status
+
+    
+
+
+class open_door(self):
+    def __init__(self):
+        pass
+
+class close_door():
+    def __init__(self):
+        pass
+
+class BlockedDoor(Door):
+    def __init__(self, is_opened):
+        pass

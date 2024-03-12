@@ -51,8 +51,27 @@
     </tr>
   </table>
   <script>
+    let i = 0
     let table = document.body.firstElementChild;
-    // your code
+    let td11 = table.querySelector("tr:nth-child(1) td:nth-child(1)");
+    let td22 = table.querySelector("tr:nth-child(2) td:nth-child(2)");
+    let td33 = table.querySelector("tr:nth-child(3) td:nth-child(3)");
+    let td44 = table.querySelector("tr:nth-child(4) td:nth-child(4)");
+    let td55 = table.querySelector("tr:nth-child(5) td:nth-child(5)");
+    let td31 = table.querySelector("tr:nth-child(3) td:nth-child(1)");
+    let td42 = table.querySelector("tr:nth-child(4) td:nth-child(2)");
+    let td53 = table.querySelector("tr:nth-child(5) td:nth-child(3)");
+    let td51 = table.querySelector("tr:nth-child(5) td:nth-child(1)");
+    let td13 = table.querySelector("tr:nth-child(1) td:nth-child(3)");
+    let td24 = table.querySelector("tr:nth-child(2) td:nth-child(4)");
+    let td35 = table.querySelector("tr:nth-child(3) td:nth-child(5)");
+    let td15 = table.querySelector("tr:nth-child(1) td:nth-child(5)");
+    
+    td =[td11, td22, td33, td44, td55, td31, td42, td53, td51, td13, td24, td35, td15]
+    while (i < td.length) {
+      td[i].style.backgroundColor = "red";
+      i += 1;
+    };
   </script>
 </body>
 </html>

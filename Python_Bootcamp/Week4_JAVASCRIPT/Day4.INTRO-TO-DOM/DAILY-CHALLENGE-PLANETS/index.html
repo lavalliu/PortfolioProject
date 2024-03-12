@@ -26,28 +26,37 @@
                 background: rgb(237, 237, 237);
                 border: 5px solid red;
             }
-            .mercure{
+            .moon-count {
+                position: absolute;
+                color: white;
+                /* font-weight: bold; */
+                font-size: 20px;
+                top: calc(75% - 15px); 
+                left: calc(-20px - 10px * var(--moons)); 
+                margin-left: -65px;
+                }
+            .mercury {
                 background-color: blueviolet;
             }
-            .venus{
+            .venus {
                 background-color: chartreuse;
             }
-            .earth{
+            .earth {
                 background-color: aqua;
             }
-            .mars{
+            .mars {
                 background-color: cornflowerblue;
             }
-            .jupiter{
+            .jupiter {
                 background-color: darkseagreen;
             }
-            .saturn{
+            .saturn {
                 background-color: darkcyan;
             }
-            .uranus{
+            .uranus {
                 background-color: firebrick;
             }
-            .neptune{
+            .neptune {
                 background-color: coral;
             }
         </style>
@@ -55,18 +64,37 @@
     <body>
 
     <section class="listPlanets"></section>
-    <p>Create a p element with some text:</p>
 
     <script>
-        planets = [Mercure, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune]
-    
-        for (let planet in planets) {
-            console.log("Planet : ", planet);
+        const planets = [
+            {name : 'Mercury', moons : 0},
+            {name : 'Venus', moons : 0},
+            {name : 'Earth', moons : 1},
+            {name : 'Mars', moons : 2},
+            {name : 'Jupiter', moons : 52},
+            {name : 'Saturn', moons : 75},
+            {name : 'Uranus', moons : 27},
+            {name : 'Neptune', moons : 14}           
+        ]
+
+        for (const planet of planets) {
             const div = document.createElement("div");
-            div.classList.add("planet")
+            div.classList.add("planet");
+            div.classList.add(planet.name.toLowerCase());
+            div.innerText = planet.name;
+            for (let i = 0; i < planet.moons; i++) {
+                const moonDiv = document.createElement("div");
+                moonDiv.classList.add("moon");
+                moonDiv.style.left = i * 10 + "px";
+                div.appendChild(moonDiv);
             }
-
+            const span = document.createElement("span");
+            span.classList.add("moon-count");
+            span.textContent = planet.moons + " moon(s)";
+            div.appendChild(span);
+            const section = document.querySelector(".listPlanets");
+            section?.appendChild(div);
+        }
     </script>
-
     </body>
 </html>

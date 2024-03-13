@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form> 
+    <ul class="usersAnswer"></ul>
+    <script>
+        let form = document.querySelector('form');
+        console.log(form);
+        let fname = document.getElementById("fname");
+        console.log(fname);
+        let lname = document.getElementById("lname");
+        console.log(lname);
+        let fnameattrib = document.getElementsByName("firstname");
+        console.log(fnameattrib);
+        let lnameattrib = document.getElementsByName("lastname");
+        console.log(lnameattrib);
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the form and the ul element
+            var form = document.querySelector('form');
+            var ul = document.querySelector('.usersAnswer');
+
+            // Listen for the form's submit event
+            form.addEventListener('submit', function(event) {
+                // Prevent the default form submission behavior
+
+                event.preventDefault();
+                let firstname = document.getElementById("fname").value;
+                console.log(firstname);
+                let lastname = document.getElementById("lname").value;
+                console.log(lastname);
+
+                // Get the input values
+                var firstName = document.getElementById('fname').value;
+                var lastName = document.getElementById('lname').value;
+
+                // Create li elements for each input value
+                var liFirstName = document.createElement('li');
+                var liLastName = document.createElement('li');
+
+                // Set the text content of each li to the input values
+                liFirstName.textContent = firstName;
+                liLastName.textContent = lastName;
+
+                // Append the li elements to the ul
+                ul.appendChild(liFirstName);
+                ul.appendChild(liLastName);
+            });
+        });
+
+    </script>
+</body>
+</html>

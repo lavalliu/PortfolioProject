@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><strong>Hello</strong> I hope you are enjoying <strong>this</strong> class. At the
+    <strong>end</strong> you <strong>will</strong> be great Developers!
+    <strong>Enjoy</strong> the <strong>JavaScript</strong> lessons</p>
+    <script>
+        let allitems = newitem1 = newitem = newp = "";
+        let allBolditems = [];
+        let ptext = document.querySelector('p').innerHTML;
+
+        function getBoldItems() {
+            allitems = (ptext.split(" "));
+            for (item in allitems) {
+                if (allitems[item].search('<strong>') >= 0) {
+                    newitem1 = allitems[item].replace("</strong>", "");
+                    newitem = newitem1.replace("<strong>", "");
+                    allBolditems.push(newitem);
+                }
+            }
+            alert("All the bold items are : " + allBolditems);
+        }
+
+        function highlight() {
+            ptext = ptext.replaceAll("</strong>", "</font>");
+            newp = ptext.replaceAll("<strong>", "<font color='blue'>");
+            document.querySelector('p').innerHTML = newp
+        }
+
+        function returnItemsToDefault() {
+            newp = newp.replaceAll("blue", "black");
+            document.querySelector('p').innerHTML = newp
+        }
+
+        getBoldItems();
+        highlight();
+        returnItemsToDefault();
+
+        let pelements = document.getElementsByTagName('p');
+        pelements[0].addEventListener("mouseover", highlight);
+        pelements[0].addEventListener("mouseout", returnItemsToDefault); 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <form>
+        <label for="item">Add item :</label><br>
+        <input type="text" id="item" name="item"><br>
+        <button type="button" onclick = "addItem()">Add Item</button>
+        <button type="button" onclick = "clearAll()">Clear the list of items</button>
+    </form> 
+    <script>
+        let shoppingList=[];
+
+        function addItem() {
+            let item = document.getElementById('item').value;
+            if (item == "") {
+                alert("the field is empty, please check and reenter properly.");
+            }
+            else {
+                shoppingList.push(item);
+                console.log(shoppingList);
+            }
+        }
+
+        function clearAll() {
+            shoppingList=[];
+            console.log(shoppingList);
+        }
+
+
+    </script>
+</body>
+</html>

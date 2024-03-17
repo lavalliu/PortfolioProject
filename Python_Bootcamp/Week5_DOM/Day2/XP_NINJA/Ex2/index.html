@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="email" id = "email" placeholder = "Enter an email address : ">
+        <button type="button" onclick="checkEmail()">Check address</button>
+    </form>
+
+    <!-- with Regex -->
+    <script>
+        const myRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        function checkEmail1(email) {
+            let myemail = document.getElementById('email').value;
+            if (myemail.match(myRegex)) {
+                alert("Regex say " + myemail + " - is correct");
+            }
+            else {
+                alert("Regex say " + myemail + " - has incorrect syntax");
+            }
+        }
+    </script>
+
+    <!-- without Regex -->
+    <script>
+        const beforea = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9","-","_","."];
+        const aftera = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9","-","."];
+        const tld = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"];
+        let myemail1 = myemail2 = "";
+        let emailarray1 = emailarray2 = [];
+
+        function checkEmail2(email) {
+            let myemail = document.getElementById('email').value;
+            email1 = myemail.split("@");
+            if (email1.length != 2){
+                alert("Without Regex I say " + myemail + " - has incorrect syntax");
+                return false;
+            } else {
+                emailarray1 = email1[0].split("");
+                emailarray2 = email1[1].split("");
+                if ((emailarray1[0] == ".") || (emailarray1[0] == "-") || (emailarray1[0] == "_") || (emailarray1[emailarray1.length-1] == ".") || (emailarray1[emailarray1.length-1] == "-") || (emailarray1[emailarray1.length-1] == "_") || (emailarray2[0] == ".") || (emailarray2[0] == "-") || (emailarray2[0] == "_") || (emailarray2[emailarray2.length-1] == ".") || (emailarray2[emailarray2.length-1] == "-") || (emailarray2[emailarray2.length-1] == "_")) {
+                    alert("Without Regex I say " + myemail + " - has incorrect syntax");
+                    return false;
+                } else {
+                    for (let i = 0; i < emailarray1.length; i += 1) {
+                        if (beforea.indexOf(emailarray1[i]) == -1) {
+                            alert("Without Regex I say " + myemail + " - has incorrect syntax");
+                            return false;
+                        } else {
+                            for (let j = 0; j < emailarray2.length; j += 1) {
+                                if (aftera.indexOf(emailarray2[j]) == -1) {
+                                    alert("Without Regex I say " + myemail + " - has incorrect syntax");
+                                    return false;
+                                }
+                             }
+                        }
+                    }
+                }
+            }
+            if (true) {
+                alert("Without Regex the tests say all good for " + myemail);
+            }
+        }
+
+        function checkEmail() {
+            checkEmail1()
+            checkEmail2()
+        }
+
+    </script>
+</body>
+</html>

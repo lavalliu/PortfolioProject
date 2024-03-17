@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+    <form id="myForm" method="get">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" value="John"><br>
+        <label for="lname">Last name</label><br>
+        <input type="text" id="lname" name="lname" value="Doe">
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', handleSubmit);
+        
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let lname = document.getElementById("lname").value;
+            let output = ("Name : " + name + ", " + lname)
+            document.getElementById('div').innerText = output;
+            }
+
+    </script>
+</body>
+</html>

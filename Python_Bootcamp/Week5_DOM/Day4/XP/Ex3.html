@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        #target {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          background: yellow;
+        }
+        #box {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="target"></div>
+        <br>
+        <div id="box"></div>
+        <script>
+            let element = document.getElementById("box")
+            element.setAttribute('draggable','true');
+
+            element.addEventListener("dragend", function(event) {
+                event.target.style.backgroundColor = "red";
+                let _x = event.clientX;
+                let _y = event.clientY;
+                event.target.style.left = _x + "px";
+                event.target.style.top = _y + "px";
+                event.target.style.position = "absolute"; //Necessary
+            });
+        </script>
+    </body>
+    </html>

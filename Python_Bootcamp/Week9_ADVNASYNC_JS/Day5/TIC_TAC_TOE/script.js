@@ -10,15 +10,17 @@ function display_board() {
     console.log("*****************");
 }
 
-function player_input() {
-    if (counter % 2 === 0) {
-        player = "O";
-    } else {
-        player = "X";
-    }
-    console.log(`Player ${player}'s turn ...`);
-    x = parseInt(prompt("Enter row (1-3): "));
-    y = parseInt(prompt("Enter column (1-3) : "));
+function player_input(choice) {
+    let player = choice;
+    console.log(player);
+//     jQuery(document).on("click"if (counter % 2 === 0) {
+//         player = "O";
+//    } else {
+//         player = "X";
+//     }
+//     console.log(`Player ${player}'s turn ...`);
+//     x = parseInt(prompt("Enter row (1-3): "));
+//     y = parseInt(prompt("Enter column (1-3) : ")); 
 }
 
 function check_win() {

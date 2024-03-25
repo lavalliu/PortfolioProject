@@ -10,57 +10,132 @@
     <div class="main-container">
         Tic Tac Toe Game
         <br>
-        <div class="choice">Choose with which sign you will start the game :</div>
         <div class="grid">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div id="cell1" class="cell1" ondblclick="play('cell1')"></div>
+            <div id="cell2" class="cell2" ondblclick="play('cell2')"></div>
+            <div id="cell3" class="cell3" ondblclick="play('cell3')"></div>
+            <div id="cell4" class="cell4" ondblclick="play('cell4')"></div>
+            <div id="cell5" class="cell5" ondblclick="play('cell5')"></div>
+            <div id="cell6" class="cell6" ondblclick="play('cell6')"></div>
+            <div id="cell7" class="cell7" ondblclick="play('cell7')"></div>
+            <div id="cell8" class="cell8" ondblclick="play('cell8')"></div>
+            <div id="cell9" class="cell9" ondblclick="play('cell9')"></div>
         </div>
-        <div class="grid">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+        <div id="container2" class="container2">
+            <div id="choice" class="choice">Double click on a cell to start the game (You will start with X)</div>
+            <br>
         </div>
-        <div class="grid">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-        </div>
-        <br>
+        <div id="message" class="message"></div>
     </div>
 </body>
 <script>
-let tictac=[["","",""],["","",""],["","",""]];
-const choice_x='x'
-const choice_o='o'
-const winCombos = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [6, 4, 2]
-]
-function write() {
+    var player;
+    var cell;
+    let counter = 0;
+    let tictac=[[9,9,9],[9,9,9],[9,9,9]];
 
-}
+    function play(cell) {
+        if (document.getElementById(cell).innerText != "") {
+            document.getElementById("container2").innerText = "Selection already exist for this cell. Please retry.";
+            return;
+        }
+        player_input(cell, player);
+        checkWinner(player);
+        computer_input();
+        checkWinner(player);
+    }
 
-startGame()
+    function assign(cell, player) {
+        document.getElementById(cell).innerText = player;
+        switch (cell) {
+            case "cell1":
+                tictac[0][0] = player;
+                break;
+            case "cell2":
+                tictac[0][1] = player;
+                break;
+            case "cell3":
+                tictac[0][2] = player;  
+                break;              
+            case "cell4":
+                tictac[1][0] = player;
+                break;
+            case "cell5":
+                tictac[1][1] = player;
+                break;
+            case "cell6":
+                tictac[1][2] = player;
+                break;
+            case "cell7":
+                tictac[2][0] = player;
+                break;
+            case "cell8":
+                tictac[2][1] = player;
+                break;
+            case "cell9":
+                tictac[2][2] = player;
+                break;
+            default:
+                break;
+        }
+    }
 
-restartButton.addEventListener('click', startGame)
+    function player_input(cell, player) {
+        player ="X";
+        document.getElementById("container2").innerText = "You are using : " + player;
+        assign(cell, player);
+    }
 
-function startGame() {
-	isPlayer_O_Turn = false
-	cellElements.forEach(cell => {
-		cell.classList.remove(PLAYER_X_CLASS)
-		cell.classList.remove(PLAYER_O_CLASS)
-		cell.removeEventListener('click', handleCellClick)
-		cell.addEventListener('click', handleCellClick, { once: true })
-	})
-	setBoardHoverClass()
-	winningMessageElement.classList.remove('show')
-}
+    function computer_input() {
+        emptyCells = [];
+        player = "O"
+        for (var i = 1; i <= 9; i++) {
+            if (document.getElementById("cell" + i).innerText === "") {
+                emptyCells.push("cell" + i);
+            }
+        }
+        let randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+        assign(randomCell, player);
+    }
+
+    function checkWinner() {
+        counter += 1
+        if ((tictac[0][0] == "X" & tictac[1][1] == "X" & tictac[2][2] == "X") ||
+            (tictac[0][2] == "X" & tictac[1][1] == "X" & tictac[2][0] == "X") ||
+            (tictac[0][0] == "X" & tictac[0][1] == "X" & tictac[0][2] == "X") ||
+            (tictac[1][0] == "X" & tictac[1][1] == "X" & tictac[1][2] == "X") ||
+            (tictac[2][0] == "X" & tictac[2][1] == "X" & tictac[2][2] == "X") ||
+            (tictac[0][0] == "X" & tictac[1][0] == "X" & tictac[2][0] == "X") ||
+            (tictac[0][1] == "X" & tictac[1][1] == "X" & tictac[2][1] == "X") ||
+            (tictac[0][2] == "X" & tictac[1][2] == "X" & tictac[2][2] == "X")) {
+                document.getElementById("container2").innerText = "Congratulations, you WON !!!!";
+                document.getElementById("container2").style.color = "red";
+                counter += 1;
+                restart()
+        }
+        else if ((tictac[0][0] == "O" & tictac[1][1] == "O" & tictac[2][2] == "O") ||
+                (tictac[0][2] == "O" & tictac[1][1] == "O" & tictac[2][0] == "O") ||
+                (tictac[0][0] == "O" & tictac[0][1] == "O" & tictac[0][2] == "O") ||
+                (tictac[1][0] == "O" & tictac[1][1] == "O" & tictac[1][2] == "O") ||
+                (tictac[2][0] == "O" & tictac[2][1] == "O" & tictac[2][2] == "O") ||
+                (tictac[0][0] == "O" & tictac[1][0] == "O" & tictac[2][0] == "O") ||
+                (tictac[0][1] == "O" & tictac[1][1] == "O" & tictac[2][1] == "O") ||
+                (tictac[0][2] == "O" & tictac[1][2] == "O" & tictac[2][2] == "O")) {
+                    document.getElementById("container2").innerText = "Too Bad I WON !!!!";
+                    document.getElementById("container2").style.color = "red";
+                    restart();
+                }
+            else if (counter == 9) {
+                document.getElementById("container2").innerText = "Its a DRAW!!";
+                document.getElementById("container2").style.color = "red";
+                restart()
+            }
+    }
+    function restart() {
+        document.getElementById("message").innerHTML = "Press on <span>'RESTART'</span> to play a new game.";
+    }
+
+
+
 </script>
 </html>

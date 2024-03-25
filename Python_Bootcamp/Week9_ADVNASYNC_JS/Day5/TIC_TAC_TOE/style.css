@@ -6,28 +6,59 @@
     text-align: center;
     font-weight: bolder;
 }
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 .grid {
     display: grid;
     grid-template-columns: 125px 125px 125px;
     grid-template-rows: 125px 125px 125px;
     justify-content: center;
-    row-gap: 2px;
-    column-gap: 2px;
+    color: white;
 }
-.grid .cell div:first-child {
-    border-top: none;
-}
-.grid .cell div:last-child {
-    border-bottom: none;
-}
-.cell {
-    /* border-right: none;
-    border-bottom: none;
-    border-left: none;
-    border-top: none; */
+.cell1, .cell2, .cell3, .cell4, .cell5, .cell6, .cell7, .cell8, .cell9 {
     border: solid 2px black;
 }
-.choice{
+.cell1, .cell2, .cell3 {
+    border-top: none;
+}
+.cell1, .cell4, .cell7 {
+    border-left: none;
+}
+.cell3, .cell6, .cell9 {
+    border-right: none;
+}
+.cell7, .cell8, .cell9 {
+    border-bottom: none;
+}
+.choice {
     font-size: 30px;
-    margin-bottom: 15px;
+    /* float: ; */
+    margin: 0 20px;
+    /* padding-top: 10px; */
+    align-items: center;
+}
+.x, .o {
+    font-size: 50px;
+    /* float: left; */
+    margin: 0 20px;
+    /* padding-left: 10px; */
+    align-items: center;
+}
+.x:hover, .o:hover, .cell1:hover, .cell2:hover, .cell3:hover, .cell4:hover, .cell5:hover, .cell6:hover, .cell7:hover, .cell8:hover, .cell9:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(52,152,252);
+}
+.message {
+    font-size: 30px;
+}
+.message span:hover {
+    background-color: white;
+    color: rgb(52,152,252);
+    cursor: pointer;
 }

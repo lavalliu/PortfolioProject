@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        .main-container {
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 20px;
+            width: auto;
+            height: 800px;
+            background: linear-gradient(rgb(255,73,76), rgb(255,92,127));
+            color: white;
+            text-align: center;
+            font-size: 40px;
+        }
+        .task-container, .listTasks {
+            width: 25%;
+            margin: auto;
+            background-color: white;
+            /* font-size: 30px; */
+            /* padding-top: 10px;
+            padding-bottom: 10px; */
+            padding-left: 20px;
+            padding-right: 20px;
+            
+        }
+        .task-container, .alert {
+
+            color: gray;
+        }
+        .listTasks {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <p>TO-DO LIST</p>
+        <div class="task-container">
+            <form action="">
+                <input id="newtask" type="text" value="new task" style="font-size: 30px; color: gray; border: none;"></input>
+                <input id="add" type="submit" value="ADD" style="font-size: 30px; color: rgb(102,173,255); border: none;"></input>
+            </form>
+        </div>
+        <br>
+        <div id="listTasks" class="listTasks"></div>
+        <div id="alert" class="alert"></div>
+        <div></div>
+    </div>
+    <script>
+        const tasks = [];
+        let p = ""
+        let task = document.getElementById("newtask").value;
+     
+        document.addEventListener('DOMContentloaded',(event) => {
+            document.getElementById("add").addEventListener('click', (event) => {
+                event.preventDefault();
+                addTask();
+            });
+        })
+    
+
+        function addTask() {
+            if (task == "") {
+                document.getElementById("alert").innerHTML="The new task is empty, Please reinput";
+            }
+            else {
+                tasks.push(task);
+                let p = document.createElement('p');
+                p.innerHTML = task;
+                document.getElementById("listTasks").appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>

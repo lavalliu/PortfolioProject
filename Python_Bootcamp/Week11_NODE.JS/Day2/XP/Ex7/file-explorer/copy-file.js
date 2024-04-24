@@ -1,3 +1,4 @@
-var fs = require('fs');
-fs.readFile('source.txt');
-fs.createFile('destination.txt');
+const fs = require('fs');
+const text = fs.readFile('./source.txt');
+
+fs.writeFile(destination.txt, text);

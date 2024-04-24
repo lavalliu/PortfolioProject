@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        #container {
+            width: 300px;
+            margin: auto;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            font-size: 100%;
+        }
+        p:hover {
+            cursor: pointer;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>Jobs that are slowly being performed by machines and are completely executed without humans. This is just another proof that the future is here.</p>
+        </div>
+
+        <script>
+            let element = document.getElementById("container")
+            element.setAttribute('draggable','true');
+
+            element.addEventListener("dragend", function(event) {
+                event.target.style.backgroundColor = "black";
+                let _x = event.clientX;
+                let _y = event.clientY;
+                event.target.style.left = _x + "px";
+                event.target.style.top = _y + "px";
+                event.target.style.position = "absolute"; //Necessary
+                event.target.style.fontSize = ((_x + _y)/30) + "px";
+            });
+        </script>
+    </body>
+    </html>

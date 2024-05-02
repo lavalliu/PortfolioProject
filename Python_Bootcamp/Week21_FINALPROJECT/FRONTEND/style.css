@@ -64,6 +64,10 @@ h1 {
     font-size: 50px;
     color: rgb(31, 92, 138);
 }
+h2 {
+    font-size: 25px;
+    color: rgb(31, 92, 138);
+}
 section{
     align-items: center;
 }

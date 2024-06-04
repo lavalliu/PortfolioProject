@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+
+    <!-- LINK TO BOOTSTRAP  AND STYLESHEET -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet"></link>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> -->
+</head>
+<body>
+<!-- RESERVATION FORM -->
+<section class="reservations" id="reservations">
+    <hr><br><br>
+    <div class="title">
+      <h1 class="text-center">My Reservation</h1>
+      <br>
+      <div class="reservations-container">
+          <div class="reservations-header">
+            <ul>
+              <li>We would recommend to contact us before you reserve, if you have :</li>
+              <li>- a booking for 10 persons or more</li>
+              <li>- for any allergies and food restrictions not mentionned below</li>
+              <li>- if you want to do a booking and you are less than 16 years old</li>
+            </ul>
+          </div>
+          <form id="myForm" onsubmit="return validateForm()">
+          <div class="row g-3">
+            <div class="row mb-3">
+              <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+              <div class="col-md-4">
+                <select id="inputTitle" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Miss</option>
+                </select>
+              </div>
+              <label for="inputPersons" class="col-sm-2 col-form-label">Number of persons</label>
+              <div class="col-md-4">
+                <select id="inputPersons" class="form-select" pattern="[0-9]">
+                  <option selected>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputFirstname" class="col-sm-2 col-form-label">First Name</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="inputFirstname">
+              </div>
+              <label for="inputLastname" class="col-sm-2 col-form-label">Last Name</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="inputLastname">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputAddress1" class="col-sm-2 col-form-label">Address</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="inputAddress1">
+              </div>
+              <label for="inputAddress2" class="col-sm-2 col-form-label">Address 2nd line</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="inputAddress2">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-md-4">
+                <input type="email" class="form-control" id="inputEmail">
+              </div>
+              <label for="inputPhone" class="col-sm-2 col-form-label">Phone Number (Local only)</label>
+              <div class="col-md-4">
+                <input type="tel" class="form-control" id="inputPhone" minlength="7" maxlength="8">
+<!-- to insert pattern validation -->
+              </div>            
+            </div>
+            <div class="row mb-3">
+              <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+              <div class="col-md-4">
+                <input type="Date" class="form-control" id="inputDate">
+              </div>
+              <label for="inputTime" class="col-sm-2 col-form-label">Time</label>
+              <div class="col-md-4">
+                <input type="Time" class="form-control" id="inputTime" value="11:00">
+              </div>
+            </div>
+            <br>
+            <div class="row mb-3">
+              <label for="inputOther" class="col-sm-2 col-form-label">Other instructions</label>
+              <div class="col-md-4">
+                <textarea class="form-control" id="inputOther" rows="3"></textarea>
+              </div>      
+              <div class="col-md-4 form-check-label">
+                Allergies and Diet<br>
+                <ul class="navbar-nav">
+                  <li><input class="form-check-input" type="checkbox" id="CheckChoco">
+                  <label class="form-check-label" for="CheckChoco">
+                  Chocolate Allergy
+                  </li>
+                  <li><input class="form-check-input" type="checkbox" id="CheckEggs">
+                    <label class="form-check-label" for="CheckEggs">
+                    Eggs Allergy
+                  </li>
+                  <li><input class="form-check-input" type="checkbox" id="CheckNuts">
+                    <label class="form-check-label" for="CheckNuts">
+                    Nuts Allergy
+                  </li>
+                  <li><input class="form-check-input" type="checkbox" id="CheckGluten">
+                    <label class="form-check-label" for="CheckGluten">
+                    Gluten Allergy
+                  </li>
+                  <li><input class="form-check-input" type="checkbox" id="CheckSeafood">
+                    <label class="form-check-label" for="CheckSeafood">
+                    Seafood Allergy
+                  </li>
+                  <li><input class="form-check-input" type="checkbox" id="CheckVeg">
+                    <label class="form-check-label" for="CheckVeg">
+                    Vegetarian Diet
+                  </li>
+                  <li><input class="form-check-input" type="checkbox" id="CheckVegan">
+                    <label class="form-check-label" for="CheckVegan">
+                    Vegan Diet
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center">
+              <button id="submit" class="btn btn-primary" >Reserve</button>
+            </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </section>    
+</body>
+</html>

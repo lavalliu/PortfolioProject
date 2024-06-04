@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+
+    <!-- LINK TO BOOTSTRAP  AND STYLESHEET -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link href="../PUBLIC/style.css" rel="stylesheet"></link>
+
+ <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-sm navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">ROYAL RESTAURANT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="starters.html">Starter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="maincourse.html">Main Course</a>
+      </li>			
+      <li class="nav-item">
+        <a class="nav-link" href="desserts.html">Desserts</a>
+      </li>	
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Beverage
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <li><a class="dropdown-item" href="soft.html">Soft</a></li>
+          <li><a class="dropdown-item" href="cocktails.html">Cocktails</a></li>
+          <li><a class="dropdown-item" href="aperitifs.html">Aperitifs</a></li>
+          <li><a class="dropdown-item" href="hot.html">Hot Beverage</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          The Cellar
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <li><a class="dropdown-item" href="red.html">The Reds</a></li>
+          <li><a class="dropdown-item" href="white.html">The Whites</a></li>
+          <li><a class="dropdown-item" href="rose.html">The Rosés</a></li>
+        </ul>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="login.html">Reserve a Table</a>
+      </li>	 -->
+      </ul>		
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link">Welcome <span id="usernameDisplay">Username</span></a>
+        </li>			
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Logout</a>
+        </li>	
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>			
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+        </li>	
+      </ul>
+    </div>
+ </div>
+</nav>
+    <br><br><br><br><br>
+    <div class="login_container">
+      <div class="icon-item">
+        <img src="../PUBLIC/user-284.svg" alt="Customer Profile">
+        <span class="icon-text" id="editProfile">Customer Profile</span>
+      </div>
+      <div class="icon-item" id="dynamicSection"></div>
+    </div>
+
+</head >
+<body>
+  <!-- footer here -->        
+  <div class="footer">
+    <p>L.Liu @2023</p>
+  </div>
+  <script src="../PUBLIC/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+          username = localStorage.getItem('username');
+          if (username) { 
+            document.getElementById('usernameDisplay').textContent = username;
+          }
+      });
+      document.getElementById('editProfile').addEventListener('click', function() {
+          window.location.href = 'update.html'; 
+      });
+      const dynamicSection = document.getElementById('dynamicSection');
+      username = localStorage.getItem('username');
+      console.log(username);
+      if (username == 'Admin') {
+          dynamicSection.innerHTML = `<img src="../PUBLIC/Items.png" alt="Manage Menus"><span class="icon-text" id="manageMenus">Manage Menus</span>`;
+          document.getElementById('manageMenus').addEventListener('click', function() {
+              window.location.href = 'items.html'; 
+          });
+      } else {
+          dynamicSection.innerHTML = `<img src="../PUBLIC/Restaurant Table.svg" alt="Table Reservation"><span class="icon-text" id="reserveTable">Table Reservation</span>`;
+          document.getElementById('reserveTable').addEventListener('click', function() {
+              window.location.href = 'reserve.html'; 
+          });
+      }
+  </script>
+</body>
+</html>
